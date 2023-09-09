@@ -4,10 +4,6 @@ if not vim.loop.fs_stat(lazypath) then
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
-if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Medium:h14.5"
-  vim.opt.linespace = 10
-end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
