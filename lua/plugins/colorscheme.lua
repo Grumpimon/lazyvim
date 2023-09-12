@@ -1,15 +1,25 @@
 return {
   {
     "navarasu/onedark.nvim",
-    opts = {
+    optonedarks = {
+      transparent = vim.g.transparent_enabled,
       style = "cool",
     },
   },
-  { "dasupradyumna/midnight.nvim", lazy = false, priority = 1000 },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "midnight",
+      colorscheme = "tokyonight",
     },
   },
 }
