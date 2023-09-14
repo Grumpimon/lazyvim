@@ -7,6 +7,7 @@ end
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.o.guifont = "CommitMonoM Nerd Font:h14.5"
+  vim.opt.linespace = 12
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
